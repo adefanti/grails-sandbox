@@ -6,6 +6,11 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
+grails.war.resources = { stagingDir ->
+	// servlet jar conflicts with Tomcat's version. See: http://jira.grails.org/browse/GRAILS-9483
+	delete(file:"${stagingDir}/WEB-INF/lib/javax.servlet-api-3.0.1.jar")
+}
+
 // uncomment (and adjust settings) to fork the JVM to isolate classpaths
 //grails.project.fork = [
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
@@ -58,6 +63,6 @@ grails.project.dependency.resolution = {
 
         runtime ":database-migration:1.3.3"
 
-        compile ':cache:1.0.1'
+        compile ":cache:1.0.1"
     }
 }
