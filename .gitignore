@@ -19,3 +19,8 @@ target
 *.ipr
 *.iws
 /.idea/
+
+# Groovy/Grails Files and Directories #
+stacktrace.log
+/plugins
+/web-app/plugins
