@@ -23,7 +23,7 @@
 		<g:message code="customer.dateOfBirth.label" default="Date Of Birth" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="dateOfBirth" precision="day"  value="${customerInstance?.dateOfBirth}"  />
+	<g:datePicker name="dateOfBirth" format="dd/MM/yyyy" precision="day"  value="${customerInstance?.dateOfBirth}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'login', 'error')} required">
