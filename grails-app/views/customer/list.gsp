@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="firstname" title="${message(code: 'customer.firstname.label', default: 'Firstname')}" />
-					
 						<g:sortableColumn property="lastname" title="${message(code: 'customer.lastname.label', default: 'Lastname')}" />
+					
+						<g:sortableColumn property="firstname" title="${message(code: 'customer.firstname.label', default: 'Firstname')}" />
 					
 						<g:sortableColumn property="dateOfBirth" title="${message(code: 'customer.dateOfBirth.label', default: 'Date Of Birth')}" />
 					
@@ -40,11 +40,11 @@
 				<g:each in="${customerInstanceList}" status="i" var="customerInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${customerInstance.id}">${fieldValue(bean: customerInstance, field: "firstname")}</g:link></td>
+						<td><g:link action="show" id="${customerInstance.id}">${fieldValue(bean: customerInstance, field: "lastname")}</g:link></td>
 					
-						<td>${fieldValue(bean: customerInstance, field: "lastname")}</td>
+						<td>${fieldValue(bean: customerInstance, field: "firstname")}</td>
 					
-						<td><g:formatDate date="${customerInstance.dateOfBirth}" /></td>
+						<td><g:formatDate format="dd/MM/yyyy" date="${customerInstance.dateOfBirth}" /></td>
 					
 						<td>${fieldValue(bean: customerInstance, field: "login")}</td>
 					

@@ -11,11 +11,11 @@ class Customer {
 	String lastname
 	Date dateOfBirth
 
-	static constraints = {
-		firstname(blank:false, nullable:false)
+	static constraints = {		
 		lastname(blank:false)
+		firstname(blank:false, nullable:false)
 		dateOfBirth(validator: {return (it < new Date())})
-		login(blank: false, nullable: false, unique: true)
-		password(blank:false, nullable:false, password: true)
+		login(blank:false, nullable:false, unique:true)
+		password(blank:false, nullable:false, password:true)
 	}
 }

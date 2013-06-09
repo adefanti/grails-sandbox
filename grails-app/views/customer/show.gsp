@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list customer">
 			
-				<g:if test="${customerInstance?.firstname}">
-				<li class="fieldcontain">
-					<span id="firstname-label" class="property-label"><g:message code="customer.firstname.label" default="Firstname" /></span>
-					
-						<span class="property-value" aria-labelledby="firstname-label"><g:fieldValue bean="${customerInstance}" field="firstname"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${customerInstance?.lastname}">
 				<li class="fieldcontain">
 					<span id="lastname-label" class="property-label"><g:message code="customer.lastname.label" default="Lastname" /></span>
 					
 						<span class="property-value" aria-labelledby="lastname-label"><g:fieldValue bean="${customerInstance}" field="lastname"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${customerInstance?.firstname}">
+				<li class="fieldcontain">
+					<span id="firstname-label" class="property-label"><g:message code="customer.firstname.label" default="Firstname" /></span>
+					
+						<span class="property-value" aria-labelledby="firstname-label"><g:fieldValue bean="${customerInstance}" field="firstname"/></span>
 					
 				</li>
 				</g:if>
