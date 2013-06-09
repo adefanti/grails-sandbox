@@ -29,8 +29,8 @@
 		<!-- grails plugins versions -->
 		<grails.cache.version>1.0.1</grails.cache.version>
 		<grails.database-migration.version>1.3.3</grails.database-migration.version>
-		<grails.jquery.version>1.8.3</grails.jquery.version>
-		<grails.resources.version>1.1.6</grails.resources.version>
+		<grails.jquery.version>1.9.1</grails.jquery.version>
+		<grails.resources.version>1.2</grails.resources.version>
 	</properties>
 
 	<!-- GitHub SCM -->
