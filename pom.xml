@@ -23,6 +23,8 @@
         <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
+        <maven-deploy-plugin.version>2.7</maven-deploy-plugin.version>
+        <maven-install-plugin.version>2.4</maven-install-plugin.version>
         <maven-project-info-reports-plugin.version>2.7</maven-project-info-reports-plugin.version>
         <maven-release-plugin.version>2.4.1</maven-release-plugin.version>
         <maven-site-plugin.version>3.3</maven-site-plugin.version>
@@ -34,6 +36,10 @@
         <grails.jquery.version>1.10.2</grails.jquery.version>
         <grails.resources.version>1.2</grails.resources.version>
     </properties>
+
+    <prerequisites>
+    	<maven>2.2.1</maven>
+    </prerequisites>
 
     <!-- GitHub SCM -->
     <scm>
@@ -128,6 +134,16 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>${maven-dependency-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven-install-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
